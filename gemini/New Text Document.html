@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMPE - Universitas PGRI Wiranegara</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        accent: '#FFC107',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #F8FAFC;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="text-primary font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-primary/95 backdrop-blur-sm text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Placeholder Logo HMPE -->
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-xl">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="font-bold text-xl tracking-wider text-accent">HMPE UNIWARA</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#tentang" class="hover:text-accent transition">Tentang</a>
+                <a href="#sambutan" class="hover:text-accent transition">Sambutan</a>
+                <a href="#berita" class="hover:text-accent transition">Berita</a>
+                <a href="#program" class="hover:text-accent transition">Program</a>
+                <a href="#prestasi" class="hover:text-accent transition">Prestasi</a>
+                <a href="#kontak" class="hover:text-accent transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex flex-col justify-center items-center text-center text-white px-4 pt-20">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+            Himpunan Mahasiswa <span class="text-accent">Pendidikan Ekonomi</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-light mb-8 italic">"Solidaritas, Satu Tekad, Seribu Aksi"</p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <a href="#" class="bg-accent text-primary font-bold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-400 hover-scale"><i class="fa-solid fa-calendar-days mr-2"></i>Kalender Proker</a>
+            <a href="#" class="bg-transparent border-2 border-accent text-accent font-bold py-3 px-6 rounded-full shadow-lg hover:bg-accent hover:text-primary hover-scale"><i class="fa-solid fa-calendar-star mr-2"></i>Event Proker</a>
+            <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-primary hover-scale"><i class="fa-solid fa-folder-open mr-2"></i>Sekretariat</a>
+            <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-primary hover-scale"><i class="fa-solid fa-wallet mr-2"></i>Bendahara</a>
+        </div>
+    </header>
+
+    <!-- 1. Tentang HMPE -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-2">Tentang HMPE</h2>
+                <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Sejarah Singkat</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Himpunan Mahasiswa Pendidikan Ekonomi (HMPE) Universitas PGRI Wiranegara (UNIWARA) Kota Pasuruan didirikan sebagai wadah aspirasi, kreasi, dan inovasi bagi seluruh mahasiswa program studi Pendidikan Ekonomi. Kami berkomitmen untuk mencetak pendidik dan wirausahawan muda yang kompeten dan berkarakter.
+                    </p>
+                </div>
+                <div class="bg-primary text-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-xl font-bold text-accent mb-3"><i class="fa-solid fa-eye mr-2"></i>Visi</h3>
+                    <p class="mb-6 text-sm text-gray-300">Menjadi organisasi kemahasiswaan yang unggul, solid, dan progresif dalam mengembangkan potensi mahasiswa Pendidikan Ekonomi di tingkat regional maupun nasional.</p>
+                    
+                    <h3 class="text-xl font-bold text-accent mb-3"><i class="fa-solid fa-bullseye mr-2"></i>Misi</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+                        <li>Membangun solidaritas dan kekeluargaan antar mahasiswa.</li>
+                        <li>Menyelenggarakan kegiatan yang meningkatkan kompetensi akademik dan non-akademik.</li>
+                        <li>Menjadi jembatan aspirasi antara mahasiswa dan pihak birokrasi kampus.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sambutan Ketua dan Wakil -->
+    <section id="sambutan" class="py-20 bg-light">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="bg-white rounded-3xl shadow-lg p-8 md:p-12 max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="w-full md:w-1/3 flex justify-center relative">
+                        <div class="w-48 h-48 bg-gray-200 rounded-full overflow-hidden border-4 border-accent relative z-10 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ketua HMPE" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h2 class="text-3xl font-bold text-primary mb-2">Sambutan Ketua & Wakil HMPE</h2>
+                        <h4 class="text-accent font-semibold mb-4">Periode 2026/2027</h4>
+                        <i class="fa-solid fa-quote-left text-3xl text-gray-200 mb-2"></i>
+                        <p class="text-gray-600 italic leading-relaxed mb-4">
+                            "Selamat datang di website resmi HMPE UNIWARA. Melalui platform ini, kami berharap dapat mewujudkan transparansi, memberikan informasi yang akurat, serta menjadi etalase dari 'Seribu Aksi' karya mahasiswa Pendidikan Ekonomi. Mari bersama-sama membangun himpunan yang progresif, inklusif, dan berprestasi. Hidup Mahasiswa!"
+                        </p>
+                        <h5 class="font-bold text-primary">Ahmad & Siti</h5>
+                        <p class="text-sm text-gray-500">Ketua & Wakil Ketua HMPE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Berita Terbaru -->
+    <section id="berita" class="py-20 bg-white">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-2">Berita & Kegiatan Terbaru</h2>
+                <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow hover-scale">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Seminar Nasional" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-accent mb-2 block">10 Agustus 2026</span>
+                        <h3 class="font-bold text-lg mb-2">Seminar Nasional Ekonomi Digital</h3>
+                        <p class="text-gray-600 text-sm mb-4">HMPE sukses menyelenggarakan seminar nasional yang membahas tantangan UMKM di era gempuran AI dan digitalisasi...</p>
+                        <a href="#" class="text-primary font-semibold text-sm hover:text-accent">Baca selengkapnya &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow hover-scale">
+                    <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bakti Sosial" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-accent mb-2 block">25 Juli 2026</span>
+                        <h3 class="font-bold text-lg mb-2">Bakti Sosial "Ekonomi Mengabdi"</h3>
+                        <p class="text-gray-600 text-sm mb-4">Penyaluran dana dan sembako hasil galang dana mahasiswa kepada panti asuhan di wilayah Kota Pasuruan...</p>
+                        <a href="#" class="text-primary font-semibold text-sm hover:text-accent">Baca selengkapnya &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow hover-scale">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Studi Banding" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-accent mb-2 block">05 Juli 2026</span>
+                        <h3 class="font-bold text-lg mb-2">Studi Banding Organisasi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Delegasi HMPE UNIWARA melakukan studi banding ke universitas di Jawa Timur untuk meningkatkan tata kelola organisasi...</p>
+                        <a href="#" class="text-primary font-semibold text-sm hover:text-accent">Baca selengkapnya &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Program HMPE -->
+    <section id="program" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Program Unggulan</h2>
+                <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20 text-center hover-scale">
+                    <i class="fa-solid fa-graduation-cap text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Tutor Sebaya</h3>
+                    <p class="text-sm text-gray-300">Bimbingan belajar antar mahasiswa untuk mata kuliah inti akuntansi dan ilmu ekonomi.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20 text-center hover-scale">
+                    <i class="fa-solid fa-store text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">EconoMart</h3>
+                    <p class="text-sm text-gray-300">Program kewirausahaan mahasiswa untuk mempraktekkan ilmu bisnis secara langsung.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20 text-center hover-scale">
+                    <i class="fa-solid fa-users text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">LKMM-TD</h3>
+                    <p class="text-sm text-gray-300">Latihan Keterampilan Manajemen Mahasiswa Tingkat Dasar untuk kaderisasi kepemimpinan.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20 text-center hover-scale">
+                    <i class="fa-solid fa-microphone text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">EconoTalk</h3>
+                    <p class="text-sm text-gray-300">Diskusi dan podcast bulanan membahas isu-isu ekonomi terhangat saat ini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Prestasi HMPE -->
+    <section id="prestasi" class="py-20 bg-light">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-2">Galeri Prestasi</h2>
+                <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover-scale">
+                    <img src="https://images.unsplash.com/photo-1561489413-985b06da5bee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Akademik" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-center px-2">Juara 1 Debat Ekonomi Nasional</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover-scale">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607fa8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Olahraga" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-center px-2">Juara Futsal Rektor Cup 2025</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover-scale">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Seni" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-center px-2">Juara 2 Tari Tradisional Jatim</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover-scale">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lomba Bisnis" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-center px-2">Gold Medal Business Plan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Testimoni -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-2">Apa Kata Mereka?</h2>
+                <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-light rounded-xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right absolute top-4 right-4 text-4xl text-gray-200"></i>
+                    <p class="text-gray-600 mb-6 relative z-10">"Berorganisasi di HMPE membentuk karakter saya menjadi lebih mandiri dan solutif. Ilmu manajemen waktu yang saya dapat sangat berguna di dunia kerja nyata."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold text-primary text-sm">Budi Santoso</h4>
+                            <p class="text-xs text-accent font-semibold">Alumni (Angkatan 2020)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-light rounded-xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right absolute top-4 right-4 text-4xl text-gray-200"></i>
+                    <p class="text-gray-600 mb-6 relative z-10">"HMPE bukan sekadar organisasi, tapi keluarga. Program kerja yang inovatif membuat saya belajar banyak hal di luar teori kelas. Sangat direkomendasikan!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold text-primary text-sm">Rina Amelia</h4>
+                            <p class="text-xs text-accent font-semibold">Mahasiswa (Semester 6)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-light rounded-xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right absolute top-4 right-4 text-4xl text-gray-200"></i>
+                    <p class="text-gray-600 mb-6 relative z-10">"Melalui program kewirausahaan HMPE, saya berhasil merintis usaha kecil-kecilan yang omzetnya lumayan untuk bayar uang kuliah."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold text-primary text-sm">Dimas Aditya</h4>
+                            <p class="text-xs text-accent font-semibold">Mahasiswa (Semester 4)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Hubungi Kami -->
+    <section id="kontak" class="py-20 bg-light border-t border-gray-200">
+        <div class="container mx-auto px-6 fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-2">Hubungi Kami</h2>
+                <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Info & Map -->
+                <div class="w-full md:w-1/2 p-8 bg-primary text-white">
+                    <h3 class="text-2xl font-bold mb-6">Sekretariat HMPE</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-accent text-xl"></i>
+                            <span>Gedung Kemahasiswaan Lantai 1, Universitas PGRI Wiranegara<br>Jl. Ki Hajar Dewantara No.27-29, Tembokrejo, Purworejo, Kota Pasuruan, Jawa Timur 67118</span>
+                        </p>
+                        <p class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-accent text-xl"></i>
+                            <span>+62 812-3456-7890 (Humas)</span>
+                        </p>
+                        <p class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-accent text-xl"></i>
+                            <span>hmpe.uniwara@gmail.com</span>
+                        </p>
+                    </div>
+                    <!-- Embed Map Placeholder -->
+                    <div class="w-full h-48 bg-gray-700 rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3954.510619864273!2d112.89886251477757!3d-7.628103394498369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7c4533b66d6c3%3A0x8baab4c759cd8f4c!2sUniversitas%20PGRI%20Wiranegara!5e0!3m2!1sen!2sid!4v1689304918451!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="w-full md:w-1/2 p-8 lg:p-12">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Kirim Pesan / Aspirasi</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="nama" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Nama Anda">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email / Kontak</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Email Anda">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1">Pesan / Aspirasi</label>
+                            <textarea id="pesan" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Tuliskan pesan atau aspirasi Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition shadow-lg">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-gray-400 py-8 border-t border-gray-800 text-center">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 Himpunan Mahasiswa Pendidikan Ekonomi - UNIWARA.</p>
+            <div class="flex gap-4 mt-4 md:mt-0 text-xl">
+                <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Scroll Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faders = document.querySelectorAll('.fade-in');
+            
+            const appearOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
