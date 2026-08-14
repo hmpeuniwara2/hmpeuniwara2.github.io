@@ -25,90 +25,96 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <body
-      style="
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        margin: 0;
-      "
-    ></body>
-
     <!-- My Style -->
-
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <!-- Navbar Start -->
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">
-        <img src="img/logohmpe.jpg" alt="logohmpe" class="logo-img" />
-        <div class="logo-teks">
-          <span class="teks-utama">HMPE</span>
-          <span class="teks-kecil">Universitas PGRI Wiranegara</span>
-        </div>
-      </a>
 
-      <div class="navbar-nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#proker">Proker</a>
-        <a href="bendahara.html">Bendahara</a>
-        <a href="sekretariat.html">Sekretariat</a>
-      </div>
-
-      <div class="navbar-extra">
-        <input
-          type="search"
-          id="search-box"
-          placeholder="Cari data di sini..."
-        />
-        <ul id="search-suggestions" class="suggestions-list"></ul>
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="humberger-menu"><i data-feather="menu"></i></a>
-      </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- TAMBAHKAN KONTEN UTAMA DI SINI AGAR HALAMAN TIDAK KOSONG -->
-    <main style="flex: 1; padding: 120px 7% 50px">
-      <div style="text-align: center">
-        <h2 style="font-size: 2rem; color: #1e293b; margin-bottom: 15px">
-          Sekretariat & Arsip Surat
-        </h2>
-        <p style="color: #64748b">
-          Halaman pengelolaan surat masuk, surat keluar, dan dokumen
-          keorganisasian.
+  <body class="sekretariat-body">
+    <!-- MODAL POP-UP PASSWORD -->
+    <div id="password-modal">
+      <div class="modal-box">
+        <h3>Area Terbatas</h3>
+        <p>
+          Masukkan password untuk mengakses halaman Sekretariat & Arsip Surat.
         </p>
+        <input
+          type="password"
+          id="input-password"
+          placeholder="Masukkan password..."
+        />
+        <button id="btn-login">Masuk</button>
+        <div id="error-msg">Password salah! Silakan coba lagi.</div>
+        <br />
+        <a href="index.html" class="back-link">&larr; Kembali ke Beranda</a>
       </div>
-    </main>
-    <!-- Konten Utama End -->
+    </div>
 
-    <!-- Footer Start -->
-    <footer>
-      <div class="footer-kiri">
-        <p>&copy; 2026 Himpunan Mahasiswa Pendidikan Ekonomi - UNIWARA.</p>
-      </div>
-      <div class="footer-kanan">
-        <a href="https://www.instagram.com/hmpe_uniwara/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="https://www.youtube.com/@hmpeuniwara585/videos"
-          ><i class="fa-brands fa-youtube"></i
-        ></a>
-        <a href="https://www.tiktok.com/@hmpeuniwara"
-          ><i class="fa-brands fa-tiktok"></i
-        ></a>
-        <!-- Menggunakan FontAwesome untuk TikTok -->
-      </div>
-    </footer>
-    <!-- Footer End -->
+    <!-- KONTEN RAHASIA SEKRETARIAT -->
+    <div id="secret-content">
+      <!-- Navbar Start -->
+      <nav class="navbar">
+        <a href="#" class="navbar-logo">
+          <img src="img/logohmpe.jpg" alt="logohmpe" class="logo-img" />
+          <div class="logo-teks">
+            <span class="teks-utama">HMPE</span>
+            <span class="teks-kecil">Universitas PGRI Wiranegara</span>
+          </div>
+        </a>
+
+        <div class="navbar-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#proker">Proker</a>
+          <a href="bendahara.html">Bendahara</a>
+          <a href="sekretariat.html">Sekretariat</a>
+        </div>
+        <div class="navbar-extra">
+          <input
+            type="text"
+            id="search-box"
+            placeholder="Cari data di sini..."
+          />
+          <ul id="search-suggestions" class="suggestions-list"></ul>
+          <a href="#" id="search"><i data-feather="search"></i></a>
+          <a href="#" id="humberger-menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <main class="secret-main">
+        <div class="secret-container">
+          <h2>Sekretariat & Arsip Surat</h2>
+          <p>
+            Selamat datang di area rahasia pengelolaan surat masuk, surat
+            keluar, dan dokumen HMPE.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-kiri">
+          <p>&copy; 2026 Himpunan Mahasiswa Pendidikan Ekonomi - UNIWARA.</p>
+        </div>
+        <div class="footer-kanan">
+          <a href="https://www.instagram.com/hmpe_uniwara/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.youtube.com/@hmpeuniwara585/videos"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://www.tiktok.com/@hmpeuniwara"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
 
     <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
     </script>
 
-    <!-- My Java Script -->
+    <!-- JavaScript Utama -->
     <script src="js/script.js"></script>
   </body>
 </html>

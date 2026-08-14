@@ -446,3 +446,93 @@ if (inputPencarian) {
     }
   });
 }
+
+// --- LOGIKA PROTEKSI PASSWORD HALAMAN BENDAHARA ---
+document.addEventListener("DOMContentLoaded", function () {
+  const passwordModal = document.getElementById("password-modal");
+  const secretContent = document.getElementById("secret-content");
+  const inputPassword = document.getElementById("input-password");
+  const btnLogin = document.getElementById("btn-login");
+  const errorMsg = document.getElementById("error-msg");
+
+  // Pastikan elemen password modal khusus bendahara ada di halaman ini
+  if (
+    passwordModal &&
+    document.body.contains(document.getElementById("formKeuangan"))
+  ) {
+    console.log("Halaman Bendahara Berhasil Dideteksi!");
+    const PASSWORD_BENDAHARA = "hmpe2026"; // Sesuaikan password yang diinginkan
+
+    function cekBendahara() {
+      if (inputPassword.value === PASSWORD_BENDAHARA) {
+        passwordModal.style.display = "none";
+        secretContent.style.display = "block"; // Menggunakan block khusus bendahara agar dashboard tidak gepeng
+        sessionStorage.setItem("isBendaharaLoggedIn", "true");
+      } else {
+        if (errorMsg) errorMsg.style.display = "block";
+        inputPassword.value = "";
+      }
+    }
+
+    if (btnLogin) {
+      btnLogin.addEventListener("click", cekBendahara);
+    }
+
+    if (inputPassword) {
+      inputPassword.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          cekBendahara();
+        }
+      });
+    }
+  }
+});
+
+// --- LOGIKA PROTEKSI PASSWORD HALAMAN SEKRETARIAT ---
+const PASSWORD_RAHASIA = "hmpe2026"; // Anda bisa ubah password-nya di sini
+
+function cekPassword() {
+  const inputEl = document.getElementById("input-password");
+  const errorMsg = document.getElementById("error-msg");
+
+  if (!inputEl) return;
+
+  const inputVal = inputEl.value;
+
+  if (inputVal === PASSWORD_RAHASIA) {
+    document.getElementById("password-modal").style.display = "none";
+    document.getElementById("secret-content").style.display = "flex";
+    // Menggunakan sessionStorage standar yang otomatis reset jika tab/halaman ditutup
+    sessionStorage.setItem("isSecretLoggedIn", "true");
+  } else {
+    if (errorMsg) errorMsg.style.display = "block";
+    inputEl.value = "";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("password-modal");
+  const secretContent = document.getElementById("secret-content");
+  const inputEl = document.getElementById("input-password");
+  const btnLogin = document.getElementById("btn-login");
+
+  if (modal && secretContent) {
+    // PERUBAHAN:
+    // Hapus sessionStorage setiap kali halaman sekretariat dimuat ulang/baru dibuka,
+    // KECUALI jika Anda ingin sesi bertahan selama tab browser tidak ditutup.
+    // Jika ingin setiap kali klik menu Sekretariat (pindah halaman) langsung minta password:
+    sessionStorage.removeItem("isSecretLoggedIn");
+
+    if (btnLogin) {
+      btnLogin.addEventListener("click", cekPassword);
+    }
+
+    if (inputEl) {
+      inputEl.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          cekPassword();
+        }
+      });
+    }
+  }
+});

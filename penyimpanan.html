@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMPE - Universitas PGRI Wiranegara</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logohmpe.jpg" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <body
+      style="
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      "
+    ></body>
+
+    <!-- My Style -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <img src="img/logohmpe.jpg" alt="logohmpe" class="logo-img" />
+        <div class="logo-teks">
+          <span class="teks-utama">HMPE</span>
+          <span class="teks-kecil">Universitas PGRI Wiranegara</span>
+        </div>
+      </a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#proker">Proker</a>
+        <a href="bendahara.html">Bendahara</a>
+        <a href="sekretariat.html">Sekretariat</a>
+      </div>
+
+      <div class="navbar-extra">
+        <input
+          type="search"
+          id="search-box"
+          placeholder="Cari data di sini..."
+        />
+        <ul id="search-suggestions" class="suggestions-list"></ul>
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="humberger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- TAMBAHKAN KONTEN UTAMA DI SINI AGAR HALAMAN TIDAK KOSONG -->
+    <main style="flex: 1; padding: 120px 7% 50px">
+      <div style="text-align: center">
+        <h2 style="font-size: 2rem; color: #1e293b; margin-bottom: 15px">
+          Sekretariat & Arsip Surat
+        </h2>
+        <p style="color: #64748b">
+          Halaman pengelolaan surat masuk, surat keluar, dan dokumen
+          keorganisasian.
+        </p>
+      </div>
+    </main>
+    <!-- Konten Utama End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-kiri">
+        <p>&copy; 2026 Himpunan Mahasiswa Pendidikan Ekonomi - UNIWARA.</p>
+      </div>
+      <div class="footer-kanan">
+        <a href="https://www.instagram.com/hmpe_uniwara/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/@hmpeuniwara585/videos"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.tiktok.com/@hmpeuniwara"
+          ><i class="fa-brands fa-tiktok"></i
+        ></a>
+        <!-- Menggunakan FontAwesome untuk TikTok -->
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Java Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
