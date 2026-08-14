@@ -988,6 +988,25 @@ body.sekretariat-body {
   color: #64748b;
 }
 
+/* --- PERBESAR TAMPILAN POP-UP PASSWORD DI HP --- */
+#password-modal .modal-box h3 {
+  font-size: 24px !important; /* Memperbesar ukuran tulisan Area Terbatas */
+}
+
+#password-modal .modal-box p {
+  font-size: 15px !important; /* Memperbesar teks deskripsi di bawahnya */
+}
+
+#password-modal .modal-box input {
+  font-size: 16px !important; /* Memperbesar teks input password */
+  padding: 12px !important;
+}
+
+#password-modal .modal-box button {
+  font-size: 16px !important; /* Memperbesar teks tombol Masuk */
+  padding: 12px !important;
+}
+
 /* Media Queries */
 
 /* Laptop */
